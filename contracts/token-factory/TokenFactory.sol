@@ -7,7 +7,7 @@ import {ITokenFactory} from "./interfaces/ITokenFactory.sol";
 import {ITokenFactoryWriter} from "./interfaces/ITokenFactoryWriter.sol";
 import {Multicall} from "@openzeppelin/contracts/utils/Multicall.sol";
 
-contract TokenFactory is TokenFactoryState, ITokenFactory, Multicall {
+contract TokenFactory is TokenFactoryState, Multicall, ITokenFactory {
     constructor() {}
 
     function createToken(
