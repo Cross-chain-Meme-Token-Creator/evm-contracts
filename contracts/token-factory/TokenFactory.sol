@@ -8,8 +8,6 @@ import {ITokenFactoryWriter} from "./interfaces/ITokenFactoryWriter.sol";
 import {Multicall} from "@openzeppelin/contracts/utils/Multicall.sol";
 
 contract TokenFactory is TokenFactoryState, Multicall, ITokenFactory {
-    constructor() {}
-
     function createToken(
         ITokenFactoryWriter.CreateTokenParams calldata params
     ) external override returns (address tokenAddr) {
